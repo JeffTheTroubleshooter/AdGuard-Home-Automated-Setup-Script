@@ -10,7 +10,7 @@ bash adguard-install.sh
 
 The script asks for an install directory (default `/opt/adguardhome`) and a web setup port (default `3000`). When it finishes, open `http://<server-ip>:3000` to finish the first-time setup.
 
-AdGuard Home serves DNS on port 53. If something else on the machine already uses port 53 (for example `systemd-resolved`), free it up first.
+AdGuard Home serves DNS on port 53. If `systemd-resolved` is holding port 53, the script turns off its DNS stub listener so AdGuard Home can use the port.
 
 ## Service
 
